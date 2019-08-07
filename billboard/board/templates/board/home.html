@@ -1,0 +1,12 @@
+{% extends "board/base.html" %}
+{% block content%}
+<h1>Welcome to BOARD :)</h1>
+{% if posts%}
+{% for post in posts%}
+<h1>{{post.title}}</h1>
+<p>{{post.author}} on {{post.date_pub}}</p>
+<p>{{post.content}}</p>
+
+{% endfor%}
+{%  endif%}
+{% endblock content %}
